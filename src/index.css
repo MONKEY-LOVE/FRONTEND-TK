@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 body{
-    background: rgb(143, 111, 162);
     color: white;
+    background-color: #451B66;
 }
 input::placeholder {
     color: rgb(0, 0, 0); 

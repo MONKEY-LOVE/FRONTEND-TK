@@ -2,7 +2,7 @@ import { useAuth } from "../context/AuthContext";
 function DashboardPage() {
 
   return (
-    <div></div>
+    <h1>test</h1>
   );
 }
 

@@ -47,7 +47,7 @@ function LoginPage() {
   placeholder='Contraseña'
 />
 </div>
-    <button type="submit" className="w-full py-2 px-3 bg-violet-500 text-white rounded-md hover:bg-violet-900 focus:outline-none focus:ring" style={{ fontSize: '18px' }}>
+    <button type="submit" className="w-full py-2 px-3 bg-blue-500 text-white rounded-md hover:bg-blue-900 focus:outline-none focus:ring">
       Iniciar Sesion
     </button>
   </form>

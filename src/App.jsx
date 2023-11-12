@@ -1,12 +1,14 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { AuthProvider } from './context/AuthContext';
-import Navbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
 import TokenCreator from "./pages/TokenCreator";
 import RegisterPage from "./pages/RegisterPage";
 import LoginPage from "./pages/LoginPage";
 import DashboardPage from "./pages/DashboardPage";
 import ProfilePage from "./pages/ProfilePage";
 import ProtectedRoutes from "./ProtectedRoutes";
+
+
 
 function App() {
   return (
@@ -18,26 +20,45 @@ function App() {
           <Route element={<ProtectedRoutes />}>
             <Route path="/register" element={
               <>
-                <Navbar />
+                <Sidebar />
+                
                 <RegisterPage />
               </>
             } />
             <Route path="/dashboard" element={
               <>
-                <Navbar />
-                <DashboardPage />
+              <div>
+                <div className="flex h-screen">
+                   <Sidebar />
+                 <div className="bg-gray-100	w-full">
+                   <DashboardPage />
+                 </div>
+                </div>
+              </div>
               </>
             } />
             <Route path="/profile" element={
               <>
-                <Navbar />
-                <ProfilePage />
+              <div>
+                <div className="flex h-screen">
+                   <Sidebar />
+                 <div className="bg-gray-100	w-full">
+                   <ProfilePage />
+                 </div>
+                </div>
+              </div>
               </>
             } />
             <Route path="/token-creator" element={
               <>
-                <Navbar />
-                <TokenCreator />
+              <div>
+                <div className="flex h-screen">
+                   <Sidebar />
+                 <div className="bg-gray-100	w-full">
+                   <TokenCreator />
+                 </div>
+                </div>
+              </div>
               </>
             } />
           </Route>
@@ -46,5 +67,6 @@ function App() {
     </AuthProvider>
   );
 }
+
 
 export default App;
