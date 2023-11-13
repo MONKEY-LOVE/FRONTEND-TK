@@ -15,17 +15,7 @@ function App() {
     <AuthProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<LoginPage />} />
-
-          <Route element={<ProtectedRoutes />}>
-            <Route path="/register" element={
-              <>
-                <Sidebar />
-                
-                <RegisterPage />
-              </>
-            } />
-            <Route path="/dashboard" element={
+        <Route path="/dashboard" element={
               <>
               <div>
                 <div className="flex h-screen">
@@ -37,6 +27,17 @@ function App() {
               </div>
               </>
             } />
+          <Route path="/" element={<LoginPage />} />
+
+          <Route element={<ProtectedRoutes />}>
+            <Route path="/register" element={
+              <>
+                <Sidebar />
+                
+                <RegisterPage />
+              </>
+            } />
+          
             <Route path="/profile" element={
               <>
               <div>
